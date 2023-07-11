@@ -15,13 +15,13 @@ public class StadiumDAO {
         this.connection = connection;
     }
 
-    public void create(String name) {
-        System.out.println("야구장 생성 시도 : "+name);
+    public void create(String stadiumName) {
+        System.out.println("야구장 생성 시도 : "+stadiumName);
         String sql = "insert into stadium_table(`stadium_name`, `stadium_created_at`) values(?, now())";
         PreparedStatement pstmt = null;
         try {
             pstmt = connection.prepareStatement(sql);
-            pstmt.setString(1, name);
+            pstmt.setString(1, stadiumName);
             int result = pstmt.executeUpdate();
             if(result==1) {
                 System.out.println("성공");
@@ -46,12 +46,12 @@ public class StadiumDAO {
             PreparedStatement pstmt = connection.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery();
             while(rs.next()){
-                Stadium a = new Stadium(
+                Stadium stadium = new Stadium(
                         rs.getInt("stadium_id"),
                         rs.getString("stadium_name"),
                         rs.getTimestamp("stadium_created_at")
                 );
-                list.add(a);
+                list.add(stadium);
             }
 
         } catch (SQLException e) {

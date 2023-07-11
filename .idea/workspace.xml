@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="391a271a-e369-459d-a710-214126ef8c97" name="Changes" comment="asd">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BaseBallApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaseBallApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/StadiumDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/StadiumDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/PlayerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Out.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Out.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Stadium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Stadium.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Team.java" afterDir="false" />
-    </list>
+    <list default="true" id="391a271a-e369-459d-a710-214126ef8c97" name="Changes" comment="230711 1758" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,7 +99,7 @@
       <workItem from="1689056593634" duration="1150000" />
       <workItem from="1689057893972" duration="8000" />
       <workItem from="1689060261852" duration="4814000" />
-      <workItem from="1689065086898" duration="691000" />
+      <workItem from="1689065086898" duration="891000" />
     </task>
     <task id="LOCAL-00001" summary="처음만들기">
       <option name="closed" value="true" />
@@ -174,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689060363448</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="230711 1758">
+      <option name="closed" value="true" />
+      <created>1689065915444</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689065915445</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +188,7 @@
     <MESSAGE value="1111111111" />
     <MESSAGE value="aaaaaaa" />
     <MESSAGE value="asd" />
-    <option name="LAST_COMMIT_MESSAGE" value="asd" />
+    <MESSAGE value="230711 1758" />
+    <option name="LAST_COMMIT_MESSAGE" value="230711 1758" />
   </component>
 </project>
