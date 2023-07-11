@@ -4,27 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="391a271a-e369-459d-a710-214126ef8c97" name="Changes" comment="aaaaaaa">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/OutDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/PlayerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/StadiumDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/TeamDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/OutService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/PlayerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/StadiumService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/TeamService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db/DBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Out.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Stadium.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Team.java" afterDir="false" />
+    <list default="true" id="391a271a-e369-459d-a710-214126ef8c97" name="Changes" comment="asd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BaseBallApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaseBallApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DBConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/qqqqqq5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/StadiumDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/StadiumDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/PlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Out.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Out.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Stadium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Stadium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Team.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,25 +62,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/workspace/baseball",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/workspace/db_lab/jdbc-blog2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\workspace\baseball" />
@@ -107,11 +96,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.BaseBallApp" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -123,7 +107,8 @@
       <updated>1689056592633</updated>
       <workItem from="1689056593634" duration="1150000" />
       <workItem from="1689057893972" duration="8000" />
-      <workItem from="1689060261852" duration="90000" />
+      <workItem from="1689060261852" duration="4814000" />
+      <workItem from="1689065086898" duration="691000" />
     </task>
     <task id="LOCAL-00001" summary="처음만들기">
       <option name="closed" value="true" />
@@ -181,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689058963760</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="asd">
+      <option name="closed" value="true" />
+      <created>1689060363448</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1689060363448</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,9 +186,9 @@
     <MESSAGE value="처음만들기1" />
     <MESSAGE value="업데이트테스트" />
     <MESSAGE value="업데이트테스트2" />
-    <MESSAGE value="asd" />
     <MESSAGE value="1111111111" />
     <MESSAGE value="aaaaaaa" />
-    <option name="LAST_COMMIT_MESSAGE" value="aaaaaaa" />
+    <MESSAGE value="asd" />
+    <option name="LAST_COMMIT_MESSAGE" value="asd" />
   </component>
 </project>
