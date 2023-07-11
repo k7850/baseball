@@ -1,2 +1,2 @@
-public class baba {
+public class baba1 {
 }
