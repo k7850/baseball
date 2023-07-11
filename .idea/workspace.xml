@@ -4,8 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="391a271a-e369-459d-a710-214126ef8c97" name="Changes" comment="1111111111">
-      <change beforePath="$PROJECT_DIR$/src/main/47254.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/qqqqqq5.java" afterDir="false" />
+    <list default="true" id="391a271a-e369-459d-a710-214126ef8c97" name="Changes" comment="aaaaaaa">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/OutDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/PlayerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/StadiumDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/TeamDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Service/OutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Service/PlayerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Service/StadiumService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Service/TeamService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/db/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Out.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Stadium.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BaseBallApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaseBallApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DBConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/qqqqqq5.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +36,23 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="baseball" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -26,6 +62,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2SPmSYXBBCTc5KNU1X7o2R1mWpl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -40,12 +79,14 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/workspace/baseball/src/main",
+    "last_opened_file_path": "C:/workspace/baseball",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -54,8 +95,23 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\baseball" />
       <recent name="C:\workspace\baseball\src\main" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BaseBallApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BaseBallApp" />
+      <module name="baseball.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BaseBallApp" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -67,6 +123,7 @@
       <updated>1689056592633</updated>
       <workItem from="1689056593634" duration="1150000" />
       <workItem from="1689057893972" duration="8000" />
+      <workItem from="1689060261852" duration="90000" />
     </task>
     <task id="LOCAL-00001" summary="처음만들기">
       <option name="closed" value="true" />
@@ -116,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689058924713</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="aaaaaaa">
+      <option name="closed" value="true" />
+      <created>1689058963760</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689058963760</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +195,7 @@
     <MESSAGE value="업데이트테스트2" />
     <MESSAGE value="asd" />
     <MESSAGE value="1111111111" />
-    <option name="LAST_COMMIT_MESSAGE" value="1111111111" />
+    <MESSAGE value="aaaaaaa" />
+    <option name="LAST_COMMIT_MESSAGE" value="aaaaaaa" />
   </component>
 </project>
