@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="391a271a-e369-459d-a710-214126ef8c97" name="Changes" comment="asd">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/47254.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/47254.java" afterDir="false" />
+    <list default="true" id="391a271a-e369-459d-a710-214126ef8c97" name="Changes" comment="1111111111">
+      <change beforePath="$PROJECT_DIR$/src/main/47254.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/qqqqqq5.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689058884548</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1111111111">
+      <option name="closed" value="true" />
+      <created>1689058924713</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689058924713</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +129,7 @@
     <MESSAGE value="업데이트테스트" />
     <MESSAGE value="업데이트테스트2" />
     <MESSAGE value="asd" />
-    <option name="LAST_COMMIT_MESSAGE" value="asd" />
+    <MESSAGE value="1111111111" />
+    <option name="LAST_COMMIT_MESSAGE" value="1111111111" />
   </component>
 </project>
