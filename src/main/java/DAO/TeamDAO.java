@@ -38,7 +38,6 @@ public class TeamDAO {
     }
 
     public List<Team> findAll() {
-        System.out.println("전체 구단 목록 보기 시도");
         List<Team> list = new ArrayList<>();
         String sql = "select * from team_table";
 
@@ -63,7 +62,7 @@ public class TeamDAO {
     }
 
     public List<TeamAndStadiumDTO> findAllJoinStadium() {
-        System.out.println("전체 구단 목록 보기 시도2");
+        System.out.println("전체 구단 목록 보기 시도");
         List<TeamAndStadiumDTO> list = new ArrayList<>();
 
         String sql = "select * from team_table join stadium_table on team_table.stadium_id = stadium_table.stadium_id";

@@ -1,7 +1,9 @@
 package service;
 
 import DAO.PlayerDAO;
+import model.DTO.PositionDTO;
 import model.Player;
+import util.Util;
 
 import java.sql.Connection;
 import java.util.List;
@@ -43,9 +45,31 @@ public class PlayerService {
                 throw new IllegalArgumentException();
             }
 
+            if (    !(answer.split("=")[3].equals("투수")) &&
+                    !(answer.split("=")[3].equals("포수")) &&
+                    !(answer.split("=")[3].equals("1루수")) &&
+                    !(answer.split("=")[3].equals("2루수")) &&
+                    !(answer.split("=")[3].equals("3루수")) &&
+                    !(answer.split("=")[3].equals("유격수")) &&
+                    !(answer.split("=")[3].equals("좌익수")) &&
+                    !(answer.split("=")[3].equals("중견수")) &&
+                    !(answer.split("=")[3].equals("우익수"))   ) {
+                throw new IllegalArgumentException();
+            }
+
+
             int a1 = Integer.valueOf(answer.split("=")[1].split("&")[0]);
             String a2 = answer.split("=")[2].split("&")[0];
             String a3 = answer.split("=")[3];
+
+
+            if (Util.checkString(a2)) {
+                throw new IllegalArgumentException();
+            }
+            if (Util.checkString(a3)) {
+                throw new IllegalArgumentException();
+            }
+
             dao.create(a1, a2, a3);
 
         } catch (Exception e) {
@@ -55,7 +79,7 @@ public class PlayerService {
 
 
     public void find(){
-        List<Player> list = dao.PlayerAll();
+        List<Player> list = dao.playerAll();
         for (Player player : list) {
             System.out.println(player);
         }
@@ -88,6 +112,15 @@ public class PlayerService {
         }
     }
 
+
+
+    public void position(){
+        List<PositionDTO> list = dao.positionTeam();
+
+        for (PositionDTO p1 : list) {
+            System.out.println(p1);
+        }
+    }
 
 
 

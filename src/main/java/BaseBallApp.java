@@ -25,7 +25,6 @@ public class BaseBallApp {
             System.out.print("어떤 기능을 요청하시겠습니까? 설명을 보려면 '설명'을 입력 ");
             answer = sc.next();
 
-
             if (answer.equals("설명")) {
                 System.out.println("**********************************");
                 System.out.println("종료하려면 : 종료");
@@ -39,9 +38,9 @@ public class BaseBallApp {
                 System.out.println("퇴출 선수를 등록하려면 : 퇴출등록?playerId=[입력]&reason=[입력]");
                 System.out.println("퇴출 선수 목록만 보려면 : 퇴출목록만");
                 System.out.println("모든 선수 중 퇴출 선수 목록을 보려면 : 퇴출목록");
+                System.out.println("포지션별 각 팀 선수를 보려면 : 포지션별목록");
                 System.out.println("**********************************");
             }
-
 
             String want;
 
@@ -54,18 +53,12 @@ public class BaseBallApp {
 
 
 
-
-
-
-
-
             // 3.1 야구장 등록
             // 요청 : 야구장등록?name=잠실야구장
             // 응답 : 성공이라는 메시지를 출력한다.
             if (want.equals("야구장등록")) {
                 stadiumService.create(answer);
             }
-
 
             // 3.2 전체 야구장 목록보기
             // 요청 : 야구장목록
@@ -74,7 +67,6 @@ public class BaseBallApp {
                 stadiumService.find();
             }
 
-
             // 3.3 팀 등록
             // 요청 : 팀등록?stadiumId=1&name=NC
             // 응답 : 성공이라는 메시지를 출력한다.
@@ -82,13 +74,11 @@ public class BaseBallApp {
                 teamService.create(answer);
             }
 
-
             // 팀목록만
             // 팀목록 기본 (스타디움 조인 없음)
             if (want.equals("팀목록만")) {
                 teamService.find();
             }
-
 
             // 3.4 전체 팀 목록
             // 요청 : 팀목록
@@ -97,7 +87,6 @@ public class BaseBallApp {
                 teamService.findAndStadium();
             }
 
-
             // 3.5 선수 등록
             // 요청 : 선수등록?teamId=1&name=이대호&position=1루수
             // 응답 : 성공이라는 메시지를 출력한다.
@@ -105,14 +94,11 @@ public class BaseBallApp {
                 playerService.create(answer);
             }
 
-
             // 모든선수목록
             // 모든 선수 보기
             if (want.equals("모든선수목록")) {
                 playerService.find();
             }
-
-
 
             // 3.6 팀별 선수 목록
             // 요청 : 선수목록?teamId=1
@@ -121,7 +107,6 @@ public class BaseBallApp {
                 playerService.findWhereTeam(answer);
             }
 
-
             // 3.7 선수 퇴출 등록
             // 요청 : 퇴출등록?playerId=1&reason=도박
             // 응답 : 성공이라는 메시지를 출력합니다
@@ -129,13 +114,11 @@ public class BaseBallApp {
                 outService.create(answer);
             }
 
-
             // 퇴출목록만
             // 퇴출만 보기
             if (want.equals("퇴출목록만")) {
                 outService.findOnlyOut();
             }
-
 
             // 3.8 선수 퇴출 목록
             // 요청 : 퇴출목록
@@ -144,20 +127,19 @@ public class BaseBallApp {
                 outService.find();
             }
 
-
             // 3.10 포지션별 팀 야구 선수 페이지
             // 요청 : 포지션별목록
             // 응답 : PositionRespDto 에 값을 담아서 콘솔에 출력합니다.
+            if (want.equals("포지션별목록")) {
+                teamService.teamAndPosition();
+                playerService.position();
+            }
 
-
-
-
+            //종료
             if (!answer.equals("종료")) {
                 answer = null;
             }
-
         }
-
 
         System.out.println("프로그램 종료");
     }

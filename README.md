@@ -77,25 +77,25 @@ insert into player_table(team_id, player_name, player_position, player_created_a
 insert into player_table(team_id, player_name, player_position, player_created_at) values(1, '렉스', '중견수', now());
 insert into player_table(team_id, player_name, player_position, player_created_at) values(1, '손아섭', '우익수', now());
 
-insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG선수1', '투수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG선수2', '포수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG선수3', '1루수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG선수4', '2루수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG선수5', '3루수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG선수6', '유격수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG선수7', '좌익수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG선수8', '중견수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG선수9', '우익수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG투수', '투수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG포수', '포수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG1루', '1루수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG2루', '2루수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG3루', '3루수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG유격', '유격수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG좌익', '좌익수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG중견', '중견수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(2, 'LG우익', '우익수', now());
 
-insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성선수1', '투수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성선수2', '포수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성선수3', '1루수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성선수4', '2루수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성선수5', '3루수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성선수6', '유격수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성선수7', '좌익수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성선수8', '중견수', now());
-insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성선수9', '우익수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성투수', '투수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성포수', '포수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성1르', '1루수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성2루', '2루수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성3루', '3루수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성유격', '유격수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성좌', '좌익수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성중', '중견수', now());
+insert into player_table(team_id, player_name, player_position, player_created_at) values(3, '삼성우', '우익수', now());
 
 
 ---------------
@@ -116,6 +116,7 @@ insert into out_table(player_id, out_reason, out_created_at) values(10, '방출'
 insert into out_table(player_id, out_reason, out_created_at) values(16, '은퇴', now());
 insert into out_table(player_id, out_reason, out_created_at) values(22, '군입대', now());
 insert into out_table(player_id, out_reason, out_created_at) values(24, '도박', now());
+insert into out_table(player_id, out_reason, out_created_at) values(25, '도박', now());
 
 select * from out_table;
 

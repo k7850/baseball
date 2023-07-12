@@ -1,5 +1,6 @@
 package DAO;
 
+import model.DTO.PositionDTO;
 import model.Player;
 import model.Stadium;
 
@@ -69,7 +70,7 @@ public class PlayerDAO {
 
 
 
-    public List<Player> PlayerAll() {
+    public List<Player> playerAll() {
         System.out.println("모든 선수 목록 보기 시도");
         List<Player> list = new ArrayList<>();
         String sql = "select * from player_table JOIN team_table ON player_table.team_id = team_table.team_id";
@@ -96,6 +97,32 @@ public class PlayerDAO {
     }
 
 
+
+
+    public List<PositionDTO> positionTeam() {
+//        System.out.println("포지션별 선수 보기 시도");
+        List<PositionDTO> list = new ArrayList<>();
+        String sql = "select player_position as position, max(if(team_id = 1, player_name, null)) as name1, max(if(team_id = 2, player_name, null)) as name2, max(if(team_id = 3, player_name, null)) as name3 from player_table group by player_position";
+
+        try {
+            PreparedStatement pstmt = connection.prepareStatement(sql);
+            ResultSet rs = pstmt.executeQuery();
+            while(rs.next()){
+                PositionDTO positionDTO = new PositionDTO(
+                        rs.getString("position"),
+                        rs.getString("name1"),
+                        rs.getString("name2"),
+                        rs.getString("name3")
+                );
+                list.add(positionDTO);
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return list;
+    }
 
 
 

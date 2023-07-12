@@ -2,6 +2,7 @@ package service;
 
 import DAO.StadiumDAO;
 import model.Stadium;
+import util.Util;
 
 import java.sql.Connection;
 import java.util.List;
@@ -27,11 +28,17 @@ public class StadiumService {
             if (!(answer.split("=")[0].equals("야구장등록?name"))) {
                 throw new IllegalArgumentException();
             }
-            if (answer.split("=")[1].length()==0) {
+            if (answer.split("=")[1].length() == 0) {
                 throw new IllegalArgumentException();
             }
 
             String a = answer.split("=")[1];
+
+
+            if (Util.checkString(a)) {
+                throw new IllegalArgumentException();
+            }
+
             dao.create(a);
 
         } catch (Exception e) {

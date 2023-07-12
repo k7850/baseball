@@ -3,6 +3,7 @@ package service;
 import DAO.OutDAO;
 import model.DTO.OutPlayerDTO;
 import model.Out;
+import util.Util;
 
 import java.sql.Connection;
 import java.util.List;
@@ -38,6 +39,10 @@ public class OutService {
 
             int a1=Integer.valueOf(answer.split("=")[1].split("&")[0]);
             String a2=answer.split("=")[2];
+
+            if (Util.checkString(a2)) {
+                throw new IllegalArgumentException();
+            }
             dao.create(a1, a2);
             dao.outTeam(a1);
 
