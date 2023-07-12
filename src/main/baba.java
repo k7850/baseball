@@ -3,6 +3,7 @@ CREATE DATABASE BASEBALL;
 USE BASEBALL;
 
 
+
 ------------
 
 CREATE TABLE stadium_table(
@@ -135,11 +136,16 @@ select p.player_id as id
     on p.team_id = t.team_id
  where t.team_name like '%롯데%';
 
--- 3.8 --
+-- 3.7 선수 퇴출 등록 --
+-- 요청 : 퇴출등록?playerId=1&reason=도박
+-- 응답 : 성공이라는 메시지를 출력합니다.
+
+
+-- 3.8 선수퇴출목록--
 select * from player_table left outer join out_table on player_table.player_id = out_table.player_id;
 
 
--- 3.10 -- 
+-- 3.10 포지션별 팀 야구 선수 페이지 -- 
 select max(case when player_position = '1루수' then player_position end) as 포지션,
        max(case when player_name = '이대호' then player_name end) as 롯데,
 	   max(case when player_name = 'LG선수3' then player_name end) as LG,
