@@ -18,9 +18,31 @@ public class TeamService {
 
 
     public void create(String answer){
-        int a1 = Integer.valueOf(answer.split("=")[1].split("&")[0]);
-        String a2 = answer.split("=")[2];
-        dao.create(a1, a2);
+        try {
+            if (answer.indexOf("?") == -1 || answer.indexOf("=") < 2) {
+                throw new IllegalArgumentException();
+            }
+
+            if (!(answer.split("=")[0].equals("팀등록?stadiumId"))) {
+                throw new IllegalArgumentException();
+            }
+            if (answer.split("=")[1].split("&")[0].length()==0) {
+                throw new IllegalArgumentException();
+            }
+            if (!(answer.split("=")[1].split("&")[1].equals("name"))) {
+                throw new IllegalArgumentException();
+            }
+            if (answer.split("=")[2].length()==0) {
+                throw new IllegalArgumentException();
+            }
+
+            int a1 = Integer.valueOf(answer.split("=")[1].split("&")[0]);
+            String a2 = answer.split("=")[2];
+            dao.create(a1, a2);
+
+        } catch (Exception e) {
+            System.out.println("오류\n팀을 등록하려면 : 팀등록?stadiumId=[입력]&name=[입력]");
+        }
     }
 
     public void find(){

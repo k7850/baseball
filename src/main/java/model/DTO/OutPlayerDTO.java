@@ -25,14 +25,3 @@ public class OutPlayerDTO {
         return string;
     }
 }
-
-
-
-//    @Override
-//    public String toString() {
-//        return "" +
-//                player +
-//                ", 퇴출이유:" + outReason +
-//                ", 퇴출일:" + Util.dateFormat(outCreatedAt) +
-//                "";
-//    }
