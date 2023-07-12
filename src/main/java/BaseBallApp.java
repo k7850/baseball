@@ -1,7 +1,10 @@
+import DAO.OutDAO;
+import DAO.PlayerDAO;
 import DAO.StadiumDAO;
 import DAO.TeamDAO;
 import db.DBConnection;
 import model.DTO.TeamAndStadiumDTO;
+import model.Player;
 import model.Stadium;
 import model.Team;
 
@@ -88,7 +91,10 @@ public class BaseBallApp {
         // 3.5 선수 등록
         // 요청 : 선수등록?teamId=1&name=이대호&position=1루수
         // 응답 : 성공이라는 메시지를 출력한다.
-
+        if (want.equals("선수등록")) {
+            PlayerDAO dao = new PlayerDAO(connection);
+            dao.create(Integer.valueOf(answer.split("=")[1].split("&")[0]), answer.split("=")[2].split("&")[0], answer.split("=")[3]);
+        }
 
 
 
@@ -96,7 +102,13 @@ public class BaseBallApp {
         // 3.6 팀별 선수 목록
         // 요청 : 선수목록?teamId=1
         // 응답 : 선수 목록은 Model -> Player를 List에 담아서 출력한다. (team_id는 출력하지 않아도 된다)
-
+        if (want.equals("선수목록")) {
+            PlayerDAO dao = new PlayerDAO(connection);
+            List<Player> list = dao.findTeamPlayer(Integer.valueOf(answer.split("=")[1]));
+            for (Player player : list) {
+                System.out.println(player);
+            }
+        }
 
 
 
@@ -104,6 +116,12 @@ public class BaseBallApp {
         // 3.7 선수 퇴출 등록
         // 요청 : 퇴출등록?playerId=1&reason=도박
         // 응답 : 성공이라는 메시지를 출력합니다
+        if (want.equals("퇴출등록")) {
+            OutDAO dao = new OutDAO(connection);
+            dao.create(Integer.valueOf(answer.split("=")[1].split("&")[0]), answer.split("=")[2]);
+            dao.create2(Integer.valueOf(answer.split("=")[1].split("&")[0]));
+        }
+
 
 
 
@@ -124,6 +142,6 @@ public class BaseBallApp {
         // 응답 : PositionRespDto 에 값을 담아서 콘솔에 출력합니다.
 
 
-
+        System.out.println("프로그램 종료");
     }
 }
