@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="391a271a-e369-459d-a710-214126ef8c97" name="Changes" comment="230711 1758">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/DTO/TeamAndStadiumDTO.java" afterDir="false" />
+    <list default="true" id="391a271a-e369-459d-a710-214126ef8c97" name="Changes" comment="230712 1002">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/DTO/OutPlayerDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BaseBallApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaseBallApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAO/OutDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/OutDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/PlayerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/PlayerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +106,7 @@
       <workItem from="1689060261852" duration="4814000" />
       <workItem from="1689065086898" duration="891000" />
       <workItem from="1689119406441" duration="212000" />
-      <workItem from="1689119679443" duration="4073000" />
+      <workItem from="1689119679443" duration="9305000" />
     </task>
     <task id="LOCAL-00001" summary="처음만들기">
       <option name="closed" value="true" />
@@ -190,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689119460726</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="230712 1002">
+      <option name="closed" value="true" />
+      <created>1689123776816</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1689123776816</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +212,7 @@
     <MESSAGE value="aaaaaaa" />
     <MESSAGE value="asd" />
     <MESSAGE value="230711 1758" />
-    <option name="LAST_COMMIT_MESSAGE" value="230711 1758" />
+    <MESSAGE value="230712 1002" />
+    <option name="LAST_COMMIT_MESSAGE" value="230712 1002" />
   </component>
 </project>
