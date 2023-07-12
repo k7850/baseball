@@ -55,7 +55,11 @@ CREATE TABLE player_table(
                              FOREIGN KEY (team_id) REFERENCES team_table (team_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-ALTER TABLE player_table ADD CONSTRAINT position_unique UNIQUE (team_id, player_position);
+-- ALTER TABLE player_table ADD CONSTRAINT position_unique UNIQUE (team_id, player_position);
+--
+ALTER TABLE player_table ADD UNIQUE (team_id, player_position);
+
+
 
 -- TRUNCATE table player_table;
 -- DROP table player_table;

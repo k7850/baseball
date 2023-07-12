@@ -2,15 +2,26 @@ package model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.ToString;
+import util.Util;
 
 import java.sql.Timestamp;
 
-@Getter @ToString @AllArgsConstructor
+@Getter @AllArgsConstructor
 public class Player {
     private Integer playerId;
     private Integer teamId;
     private String playerName;
     private String playerPosition;
     private Timestamp playerCreatedAt;
+
+    @Override
+    public String toString() {
+        return "" +
+                "선수ID:" + playerId +
+                ", 팀ID:" + teamId +
+                ", 이름:" + playerName +
+                ", 포지션:" + playerPosition +
+                ", 선수시작일:" + Util.dateFormat(playerCreatedAt) +
+                "";
+    }
 }

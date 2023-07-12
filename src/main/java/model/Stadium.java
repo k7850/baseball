@@ -1,19 +1,25 @@
 package model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.ToString;
+import util.Util;
 
 import java.sql.Timestamp;
 
-@Getter @ToString
+@Getter @AllArgsConstructor
 public class Stadium {
     private Integer stadiumId;
     private String stadiumName;
     private Timestamp stadiumCreatedAt;
 
-    public Stadium(Integer stadiumId, String stadiumName, Timestamp stadiumCreatedAt) {
-        this.stadiumId = stadiumId;
-        this.stadiumName = stadiumName;
-        this.stadiumCreatedAt = stadiumCreatedAt;
+
+    @Override
+    public String toString() {
+        return "" +
+                "구장ID:" + stadiumId +
+                ", 구장명:" + stadiumName +
+                ", 구장완공일:" + Util.dateFormat(stadiumCreatedAt) +
+                "";
     }
+
 }

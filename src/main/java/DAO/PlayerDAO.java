@@ -69,6 +69,36 @@ public class PlayerDAO {
 
 
 
+    public List<Player> PlayerAll() {
+        System.out.println("모든 선수 목록 보기 시도");
+        List<Player> list = new ArrayList<>();
+        String sql = "select * from player_table JOIN team_table ON player_table.team_id = team_table.team_id";
+
+        try {
+            PreparedStatement pstmt = connection.prepareStatement(sql);
+            ResultSet rs = pstmt.executeQuery();
+            while(rs.next()){
+                Player player = new Player(
+                        rs.getInt("player_id"),
+                        rs.getInt("team_id"),
+                        rs.getString("player_name"),
+                        rs.getString("player_position"),
+                        rs.getTimestamp("player_created_at")
+                );
+                list.add(player);
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return list;
+    }
+
+
+
+
+
 
 
 }

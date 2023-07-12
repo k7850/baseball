@@ -1,6 +1,7 @@
 package DAO;
 
 import model.DTO.OutPlayerDTO;
+import model.Out;
 import model.Player;
 
 import java.sql.*;
@@ -38,7 +39,7 @@ public class OutDAO {
         }
     }
 
-    public void create2(int playerId) {
+    public void outTeam(int playerId) {
         System.out.println("팀에서 선수 방출 : "+playerId);
         String sql = "update player_table set team_id = null where player_id = ?";
         PreparedStatement pstmt = null;
@@ -92,6 +93,32 @@ public class OutDAO {
     }
 
 
+
+
+    public List<Out> findOnlyOut() {
+        System.out.println("퇴출목록만 보기");
+        List<Out> list = new ArrayList<>();
+
+        String sql = "select * from out_table";
+
+        try {
+            PreparedStatement pstmt = connection.prepareStatement(sql);
+            ResultSet rs = pstmt.executeQuery();
+            while(rs.next()){
+                Out out = new Out(
+                        rs.getInt("out_id"),
+                        rs.getInt("player_id"),
+                        rs.getString("out_reason"),
+                        rs.getTimestamp("out_created_at")
+                );
+                list.add(out);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return list;
+    }
 
 
 }
