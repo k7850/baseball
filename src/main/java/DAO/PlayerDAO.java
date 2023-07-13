@@ -2,7 +2,6 @@ package DAO;
 
 import model.DTO.PositionDTO;
 import model.Player;
-import model.Stadium;
 
 import java.sql.*;
 import java.util.ArrayList;

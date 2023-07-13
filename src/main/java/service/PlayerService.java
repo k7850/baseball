@@ -12,12 +12,18 @@ public class PlayerService {
     private Connection connection;
     private PlayerDAO dao;
 
-    public PlayerService(Connection connection) {
+    private PlayerService(Connection connection) {
         this.connection = connection;
         dao = new PlayerDAO(connection);
     }
 
-
+    private static PlayerService instance;
+    public static PlayerService getInstance(Connection con){
+        if (instance == null) {
+            instance = new PlayerService(con);
+        }
+        return instance;
+    }
 
 
     public void create(String answer){

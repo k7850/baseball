@@ -11,11 +11,19 @@ public class StadiumService {
     private Connection connection;
     private StadiumDAO dao;
 
-
-    public StadiumService(Connection connection) {
+    private StadiumService(Connection connection) {
         this.connection = connection;
         dao = new StadiumDAO(connection);
     }
+
+    private static StadiumService instance;
+    public static StadiumService getInstance(Connection con){
+        if (instance == null) {
+            instance = new StadiumService(con);
+        }
+        return instance;
+    }
+
 
 
     public void create(String answer) {

@@ -12,10 +12,19 @@ public class OutService {
     private Connection connection;
     private OutDAO dao;
 
-    public OutService(Connection connection) {
+    private OutService(Connection connection) {
         this.connection = connection;
         dao = new OutDAO(connection);
     }
+
+    private static OutService instance;
+    public static OutService getInstance(Connection con){
+        if (instance == null) {
+            instance = new OutService(con);
+        }
+        return instance;
+    }
+
 
 
     public void create(String answer){

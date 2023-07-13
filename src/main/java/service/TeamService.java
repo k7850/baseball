@@ -12,9 +12,18 @@ public class TeamService {
     private Connection connection;
     private TeamDAO dao;
 
-    public TeamService(Connection connection) {
+    private TeamService(Connection connection) {
         this.connection = connection;
         dao = new TeamDAO(connection);
+    }
+
+
+    private static TeamService instance;
+    public static TeamService getInstance(Connection con){
+        if (instance == null) {
+            instance = new TeamService(con);
+        }
+        return instance;
     }
 
 
