@@ -44,7 +44,7 @@ public class PlayerDAO {
     public List<Player> findTeamPlayer(int teamId) {
         System.out.println("해당 구단 소속선수 목록 보기 시도");
         List<Player> list = new ArrayList<>();
-        String sql = "select * from player_table JOIN team_table ON player_table.team_id = team_table.team_id where player_table.team_id=?";
+        String sql = "select * from player_table JOIN team_table ON player_table.team_id = team_table.team_id where player_table.team_id=? ORDER BY player_table.player_id ASC";
 
         try {
             PreparedStatement pstmt = connection.prepareStatement(sql);
@@ -73,7 +73,7 @@ public class PlayerDAO {
     public List<Player> playerAll() {
         System.out.println("모든 선수 목록 보기 시도");
         List<Player> list = new ArrayList<>();
-        String sql = "select * from player_table JOIN team_table ON player_table.team_id = team_table.team_id";
+        String sql = "select * from player_table LEFT JOIN team_table ON player_table.team_id = team_table.team_id ORDER BY player_table.player_id ASC";
 
         try {
             PreparedStatement pstmt = connection.prepareStatement(sql);

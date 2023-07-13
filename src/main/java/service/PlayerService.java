@@ -103,6 +103,11 @@ public class PlayerService {
 
             int a1 = Integer.valueOf(answer.split("=")[1]);
             List<Player> list = dao.findTeamPlayer(a1);
+
+            if(!(list.size()==9)){
+                System.out.println("해당 팀 선수가 9명이 아닙니다. 선수를 추가하세요.");
+            }
+
             for (Player player : list) {
                 System.out.println(player);
             }

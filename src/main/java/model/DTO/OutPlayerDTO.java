@@ -16,12 +16,14 @@ public class OutPlayerDTO {
 
     @Override
     public String toString() {
-        String string;
+        String str;
 
-        string = player.toString();
-        if(!(outReason==null)){string = string + ", 퇴출이유:" + outReason;}
-        if(!(outCreatedAt==null)){string = string + ", 퇴출일:" + Util.dateFormat(outCreatedAt);}
+        str = player.toString();
+        if(!(outReason==null)){str = str + ", 퇴출이유:" + outReason;}
+        else{str = str + ", -";}
+        if(!(outCreatedAt==null)){str = str + ", 퇴출일:" + Util.dateFormat(outCreatedAt);}
+        else{str = str + ", -";}
 
-        return string;
+        return str;
     }
 }

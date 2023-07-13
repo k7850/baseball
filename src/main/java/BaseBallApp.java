@@ -19,8 +19,15 @@ public class BaseBallApp {
         PlayerService playerService = new PlayerService(connection);
         OutService outService = new OutService(connection);
 
-        answer=null;
-        while (answer == null) {
+        answer="반복";
+        while (answer.equals("반복")) {
+
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                System.out.println("sleep오류");
+                throw new RuntimeException(e);
+            }
 
             System.out.print("어떤 기능을 요청하시겠습니까? 설명을 보려면 '설명'을 입력 ");
             answer = sc.next();
@@ -137,8 +144,9 @@ public class BaseBallApp {
 
             //종료
             if (!answer.equals("종료")) {
-                answer = null;
+                answer = "반복";
             }
+
         }
 
         System.out.println("프로그램 종료");
