@@ -9,11 +9,9 @@ import java.sql.Connection;
 import java.util.List;
 
 public class PlayerService implements Service {
-    private Connection connection;
     private PlayerDAO dao;
 
     private PlayerService(Connection connection) {
-        this.connection = connection;
         dao = new PlayerDAO(connection);
     }
 
@@ -32,7 +30,6 @@ public class PlayerService implements Service {
             if (answer.indexOf("?") == -1 || answer.indexOf("=") < 3) {
                 throw new IllegalArgumentException();
             }
-
             if (!(answer.split("=")[0].equals("선수등록?teamId"))) {
                 throw new IllegalArgumentException();
             }

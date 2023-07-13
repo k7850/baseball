@@ -9,11 +9,9 @@ import java.sql.Connection;
 import java.util.List;
 
 public class TeamService implements Service {
-    private Connection connection;
     private TeamDAO dao;
 
     private TeamService(Connection connection) {
-        this.connection = connection;
         dao = new TeamDAO(connection);
     }
 
@@ -80,6 +78,7 @@ public class TeamService implements Service {
     @RequestMapping(uri = "포지션별목록")
     public void teamAndPosition() {
         List<Team> findAllList = dao.findAll();
+        System.out.print("    ");
         for (Team team : findAllList) {
             System.out.print("  " + team.getTeamName());
         }

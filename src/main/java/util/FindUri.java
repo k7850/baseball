@@ -8,7 +8,19 @@ import java.lang.reflect.Method;
 
 public class FindUri {
 
-    public static void findUri(Service service, String want, String answer) throws Exception {
+    public static void findUri(Service service, String answer) throws Exception {
+
+        String want;
+
+        if (answer.indexOf("?") == (-1)) {
+            want = answer;
+        } // 물음표가 없으면 입력 전체를 want
+        else {
+            want = answer.split("\\?")[0];
+        } // 물음표가 있으면 물음표보다 앞부분을 want
+
+
+
         Method[] methods = service.getClass().getDeclaredMethods();
         // 매서드배열 methods = uc객체의 클래스의 선언된메서드 배열
 

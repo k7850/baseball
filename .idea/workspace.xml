@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="391a271a-e369-459d-a710-214126ef8c97" name="Changes" comment="230713 1100 0.2 싱글톤">
-      <change afterPath="$PROJECT_DIR$/README2.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/RequestMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/FindUri.java" afterDir="false" />
+    <list default="true" id="391a271a-e369-459d-a710-214126ef8c97" name="Changes" comment="230713 1427 0.3 어노테이션">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BaseBallApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaseBallApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAO/PlayerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/PlayerDAO.java" afterDir="false" />
@@ -16,7 +12,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PlayerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/StadiumService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/StadiumService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/TeamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/TeamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/FindUri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/FindUri.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,26 +63,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/workspace/baseball&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/workspace/baseball",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\workspace\baseball" />
@@ -127,7 +123,7 @@
       <workItem from="1689140590803" duration="783000" />
       <workItem from="1689141479019" duration="15969000" />
       <workItem from="1689205938198" duration="5550000" />
-      <workItem from="1689211499600" duration="13918000" />
+      <workItem from="1689211499600" duration="16838000" />
     </task>
     <task id="LOCAL-00001" summary="처음만들기">
       <option name="closed" value="true" />
@@ -257,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689213653378</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="230713 1427 0.3 어노테이션">
+      <option name="closed" value="true" />
+      <created>1689226063199</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1689226063199</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +283,7 @@
     <MESSAGE value="230712 1939" />
     <MESSAGE value="230713 0950 0.1" />
     <MESSAGE value="230713 1100 0.2 싱글톤" />
-    <option name="LAST_COMMIT_MESSAGE" value="230713 1100 0.2 싱글톤" />
+    <MESSAGE value="230713 1427 0.3 어노테이션" />
+    <option name="LAST_COMMIT_MESSAGE" value="230713 1427 0.3 어노테이션" />
   </component>
 </project>

@@ -8,11 +8,9 @@ import java.sql.Connection;
 import java.util.List;
 
 public class StadiumService implements Service {
-    private Connection connection;
     private StadiumDAO dao;
 
     private StadiumService(Connection connection) {
-        this.connection = connection;
         dao = new StadiumDAO(connection);
     }
 

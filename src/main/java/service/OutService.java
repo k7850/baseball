@@ -9,11 +9,9 @@ import java.sql.Connection;
 import java.util.List;
 
 public class OutService implements Service {
-    private Connection connection;
     private OutDAO dao;
 
     private OutService(Connection connection) {
-        this.connection = connection;
         dao = new OutDAO(connection);
     }
 

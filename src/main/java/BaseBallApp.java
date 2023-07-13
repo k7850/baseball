@@ -19,6 +19,7 @@ public class BaseBallApp {
 
         String answer = "반복";
 
+
         while (answer.equals("반복")) {
 
             try {
@@ -35,29 +36,20 @@ public class BaseBallApp {
                 Util.help();
             }
 
-            String want;
-            if (answer.indexOf("?") == (-1)) {
-                want = answer;
-            } // 물음표가 없으면 입력 전체를 want
-            else {
-                want = answer.split("\\?")[0];
-            } // 물음표가 있으면 물음표보다 앞부분을 want
-
-            
             try {
-                FindUri.findUri(stadiumService, want, answer);
-                FindUri.findUri(teamService, want, answer);
-                FindUri.findUri(playerService, want, answer);
-                FindUri.findUri(outService, want, answer);
+                FindUri.findUri(stadiumService, answer);
+                FindUri.findUri(teamService, answer);
+                FindUri.findUri(playerService, answer);
+                FindUri.findUri(outService, answer);
             } catch (Exception e) {
                 System.out.println("finduri오류");
             }
-
 
             if (!answer.equals("종료")) {
                 answer = "반복";
             }
         }
+        sc.close();
         System.out.println("프로그램 종료");
     }
 }
