@@ -13,9 +13,7 @@ public class TeamAndStadiumDTO {
 
     @Override
     public String toString() {
-        return "" +
-                "" + team +
-                ", " + stadium +
-                "";
+        return  team +
+                "   " + stadium;
     }
 }

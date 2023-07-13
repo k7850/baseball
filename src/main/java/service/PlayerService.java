@@ -6,6 +6,7 @@ import model.Player;
 import util.Util;
 
 import java.sql.Connection;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PlayerService implements Service {
@@ -108,12 +109,34 @@ public class PlayerService implements Service {
             int a1 = Integer.valueOf(answer.split("=")[1]);
             List<Player> list = dao.findTeamPlayer(a1);
 
-            if(list.size()<9 && list.size()>=1){
-                System.out.println("해당 팀 선수가 9명이 아닙니다. 선수를 추가하세요.");
-            }
+//            if(list.size()<9 && list.size()>=1){
+//                System.out.println("해당 팀 선수가 9명이 아닙니다. 선수를 추가하세요.");
+//            }
+//            System.out.println(player.getPlayerPosition());
+//            String[] check9 = new String[]{"투수","포수","1루수","2루수","3루수","유격수","좌익수","중견수","우익수"};
+
+            ArrayList<String> check9 = new ArrayList<>();
+            check9.add("투수");
+            check9.add("포수");
+            check9.add("1루수");
+            check9.add("2루수");
+            check9.add("3루수");
+            check9.add("유격수");
+            check9.add("좌익수");
+            check9.add("중견수");
+            check9.add("우익수");
 
             for (Player player : list) {
-                System.out.println(player);
+                String str = player.getPlayerPosition();
+                if(check9.contains(str)){
+                    check9.remove(str);
+                    System.out.println(player);
+                }
+            }
+            if(list.size()<9 && list.size()>=1){
+                System.out.println(check9+"가 팀에 없습니다. 선수를 추가하세요.");
+            } else if(list.size()==9){
+                System.out.println("팀에 선수 9명이 모두 있습니다.");
             }
 
         } catch (Exception e) {

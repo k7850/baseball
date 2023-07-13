@@ -12,11 +12,17 @@ public class PositionDTO {
 
     @Override
     public String toString() {
-        return
-                "" + position +
-                " : " + name1 +
-                ", " + name2 +
-                ", " + name3 +
-                "";
+
+        String str= position + " : ";
+
+        if(name1==null){str=str+"없음"+"    ";}
+        else{str=str+name1+"  ";}
+        if(name2==null){str=str+"없음"+"    ";}
+        else{str=str+name2+"  ";}
+        if(name3==null){str=str+"없음"+"    ";}
+        else{str=str+name3+"  ";}
+
+
+        return str;
     }
 }

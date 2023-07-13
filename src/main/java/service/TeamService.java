@@ -78,9 +78,9 @@ public class TeamService implements Service {
     @RequestMapping(uri = "포지션별목록")
     public void teamAndPosition() {
         List<Team> findAllList = dao.findAll();
-        System.out.print("    ");
+        System.out.print("  ");
         for (Team team : findAllList) {
-            System.out.print("  " + team.getTeamName());
+            System.out.print(" " + team.getTeamName());
         }
         System.out.println();
     }
