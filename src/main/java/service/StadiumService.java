@@ -7,7 +7,7 @@ import util.Util;
 import java.sql.Connection;
 import java.util.List;
 
-public class StadiumService {
+public class StadiumService implements Service {
     private Connection connection;
     private StadiumDAO dao;
 
@@ -17,6 +17,7 @@ public class StadiumService {
     }
 
     private static StadiumService instance;
+
     public static StadiumService getInstance(Connection con){
         if (instance == null) {
             instance = new StadiumService(con);
@@ -26,6 +27,7 @@ public class StadiumService {
 
 
 
+    @RequestMapping(uri = "야구장등록")
     public void create(String answer) {
 
         try {
@@ -55,7 +57,7 @@ public class StadiumService {
 
     }
 
-
+    @RequestMapping(uri = "야구장목록")
     public void find() {
         List<Stadium> findAllList = dao.findAll();
         for (Stadium stadium : findAllList) {

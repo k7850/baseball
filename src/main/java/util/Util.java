@@ -21,4 +21,21 @@ public class Util {
         }
     }
 
+    public static void help(){
+        System.out.println("**********************************");
+        System.out.println("종료하려면 : 종료");
+        System.out.println("야구장을 등록하려면 : 야구장등록?name=[입력]");
+        System.out.println("야구장 목록을 보려면 : 야구장목록");
+        System.out.println("팀을 등록하려면 : 팀등록?stadiumId=[입력]&name=[입력]");
+        System.out.println("팀 목록을 보려면 : 팀목록");
+        System.out.println("선수를 등록하려면 : 선수등록?teamId=[입력]&name=[입력]&position=[입력]");
+        System.out.println("전체 선수 목록을 보려면 : 모든선수목록");
+        System.out.println("특정 팀 선수 목록을 보려면 : 선수목록?teamId=[입력]");
+        System.out.println("퇴출 선수를 등록하려면 : 퇴출등록?playerId=[입력]&reason=[입력]");
+        System.out.println("퇴출 선수 목록만 보려면 : 퇴출목록만");
+        System.out.println("모든 선수 중 퇴출 선수 목록을 보려면 : 퇴출목록");
+        System.out.println("포지션별 각 팀 선수를 보려면 : 포지션별목록");
+        System.out.println("**********************************");
+    }
+
 }

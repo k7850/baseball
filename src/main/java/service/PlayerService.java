@@ -8,7 +8,7 @@ import util.Util;
 import java.sql.Connection;
 import java.util.List;
 
-public class PlayerService {
+public class PlayerService implements Service {
     private Connection connection;
     private PlayerDAO dao;
 
@@ -18,6 +18,7 @@ public class PlayerService {
     }
 
     private static PlayerService instance;
+
     public static PlayerService getInstance(Connection con){
         if (instance == null) {
             instance = new PlayerService(con);
@@ -25,7 +26,7 @@ public class PlayerService {
         return instance;
     }
 
-
+    @RequestMapping(uri = "선수등록")
     public void create(String answer){
         try {
             if (answer.indexOf("?") == -1 || answer.indexOf("=") < 3) {
@@ -83,7 +84,7 @@ public class PlayerService {
         }
     }
 
-
+    @RequestMapping(uri = "모든선수목록")
     public void find(){
         List<Player> list = dao.playerAll();
         for (Player player : list) {
@@ -91,7 +92,7 @@ public class PlayerService {
         }
     }
 
-
+    @RequestMapping(uri = "선수목록")
     public void findWhereTeam(String answer){
         try {
             if (answer.indexOf("?") == -1 || answer.indexOf("=") == -1) {
@@ -110,7 +111,7 @@ public class PlayerService {
             int a1 = Integer.valueOf(answer.split("=")[1]);
             List<Player> list = dao.findTeamPlayer(a1);
 
-            if(!(list.size()==9)){
+            if(list.size()<9 && list.size()>=1){
                 System.out.println("해당 팀 선수가 9명이 아닙니다. 선수를 추가하세요.");
             }
 
@@ -125,6 +126,7 @@ public class PlayerService {
 
 
 
+    @RequestMapping(uri = "포지션별목록")
     public void position(){
         List<PositionDTO> list = dao.positionTeam();
 

@@ -2,6 +2,7 @@ package DAO;
 
 import model.DTO.PositionDTO;
 import model.Player;
+import service.RequestMapping;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -43,7 +44,7 @@ public class PlayerDAO {
     public List<Player> findTeamPlayer(int teamId) {
         System.out.println("해당 구단 소속선수 목록 보기 시도");
         List<Player> list = new ArrayList<>();
-        String sql = "select * from player_table JOIN team_table ON player_table.team_id = team_table.team_id where player_table.team_id=? ORDER BY player_table.player_id ASC";
+        String sql = "select * from player_table JOIN team_table ON player_table.team_id = team_table.team_id where player_table.team_id=? ORDER BY Field(player_table.player_position, '투수', '포수', '1루수', '2루수', '3루수', '유격수', '좌익수', '중견수', '우익수')";
 
         try {
             PreparedStatement pstmt = connection.prepareStatement(sql);
@@ -101,7 +102,7 @@ public class PlayerDAO {
     public List<PositionDTO> positionTeam() {
 //        System.out.println("포지션별 선수 보기 시도");
         List<PositionDTO> list = new ArrayList<>();
-        String sql = "select player_position as position, max(if(team_id = 1, player_name, null)) as name1, max(if(team_id = 2, player_name, null)) as name2, max(if(team_id = 3, player_name, null)) as name3 from player_table group by player_position";
+        String sql = "select player_position as position, max(if(team_id = 1, player_name, null)) as name1, max(if(team_id = 2, player_name, null)) as name2, max(if(team_id = 3, player_name, null)) as name3 from player_table group by player_position ORDER BY Field(position, '투수', '포수', '1루수', '2루수', '3루수', '유격수', '좌익수', '중견수', '우익수')";
 
         try {
             PreparedStatement pstmt = connection.prepareStatement(sql);

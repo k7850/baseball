@@ -8,7 +8,7 @@ import util.Util;
 import java.sql.Connection;
 import java.util.List;
 
-public class TeamService {
+public class TeamService implements Service {
     private Connection connection;
     private TeamDAO dao;
 
@@ -19,6 +19,7 @@ public class TeamService {
 
 
     private static TeamService instance;
+
     public static TeamService getInstance(Connection con){
         if (instance == null) {
             instance = new TeamService(con);
@@ -26,7 +27,7 @@ public class TeamService {
         return instance;
     }
 
-
+    @RequestMapping(uri = "팀등록")
     public void create(String answer) {
         try {
             if (answer.indexOf("?") == -1 || answer.indexOf("=") < 2) {
@@ -60,13 +61,14 @@ public class TeamService {
         }
     }
 
+    @RequestMapping(uri = "팀목록만")
     public void find() {
         List<Team> findAllList = dao.findAll();
         for (Team team : findAllList) {
             System.out.println(team);
         }
     }
-
+    @RequestMapping(uri = "팀목록")
     public void findAndStadium() {
         List<TeamAndStadiumDTO> findAllJoinStadiumList = dao.findAllJoinStadium();
         for (TeamAndStadiumDTO t1 : findAllJoinStadiumList) {
@@ -75,6 +77,7 @@ public class TeamService {
     }
 
 
+    @RequestMapping(uri = "포지션별목록")
     public void teamAndPosition() {
         List<Team> findAllList = dao.findAll();
         for (Team team : findAllList) {

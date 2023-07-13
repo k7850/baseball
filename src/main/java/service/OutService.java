@@ -8,7 +8,7 @@ import util.Util;
 import java.sql.Connection;
 import java.util.List;
 
-public class OutService {
+public class OutService implements Service {
     private Connection connection;
     private OutDAO dao;
 
@@ -27,6 +27,7 @@ public class OutService {
 
 
 
+    @RequestMapping(uri = "퇴출등록")
     public void create(String answer){
         try {
             if (answer.indexOf("?") == -1 || answer.indexOf("=") < 3) {
@@ -62,6 +63,7 @@ public class OutService {
 
 
 
+    @RequestMapping(uri = "퇴출목록")
     public void find(){
         List<OutPlayerDTO> list = dao.findOutPlayer();
         for (OutPlayerDTO dto : list) {
@@ -71,6 +73,7 @@ public class OutService {
 
 
 
+    @RequestMapping(uri = "퇴출목록만")
     public void findOnlyOut(){
         List<Out> list = dao.findOnlyOut();
         for (Out out : list) {
